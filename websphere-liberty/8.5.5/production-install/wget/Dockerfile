@@ -24,7 +24,7 @@ RUN apt-get update \
 RUN wget  -q  <User Credentials> \
    <URL>/ibm-java*archive.bin -O /tmp/java.bin \
    && chmod +x /tmp/java.bin \
-   && /tmp/java.bin -i silent -DUSER_INSTALL_DIR=/opt/ibm/java \
+   && /tmp/java.bin -i silent -DUSER_INSTALL_DIR=/opt/ibm/java -DLICENSE_ACCEPTED=TRUE \
    && rm /tmp/java.bin
 
 ENV JAVA_HOME /opt/ibm/java
